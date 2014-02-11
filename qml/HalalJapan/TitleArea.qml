@@ -29,7 +29,7 @@ Item {
         width: parent.height
         height: parent.height
         anchors { verticalCenter: parent.verticalCenter; left: parent.left }
-        iconSource: pageStack.currentPage.leftTools === null ? "HalalJapan/images/minimize-grey.png" : !theme.inverted ? "HalalJapan/images/minimize.png" : "HalalJapan/images/minimize-white.png"
+        iconSource: pageStack.currentPage === null || pageStack.currentPage.leftTools === null ? "HalalJapan/images/minimize-grey.png" : !theme.inverted ? "HalalJapan/images/minimize.png" : "HalalJapan/images/minimize-white.png"
 //        onClicked: Utils.minimize()
         onClicked: {
             if (pageStack.currentPage !== null && pageStack.currentPage.leftTools !== null)

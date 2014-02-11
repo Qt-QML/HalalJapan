@@ -70,6 +70,9 @@ public:
 
     PlaceDetail *getCurrentPlaceDetail();
 
+    QStringList getItemList() const;
+    void setItemList(const QStringList &value);
+
 signals:
     void currentPageChanged();
     void totalPageChanged();
@@ -80,7 +83,7 @@ public slots:
     void addItem(QVariantMap itemMap);
 
 private:
-    QStringList itemIndexList;
+    QStringList itemList, itemIndexList;
     QVariantMap allItemMap, currentPlaceMap;
     QHash<int, QByteArray> roles;
 

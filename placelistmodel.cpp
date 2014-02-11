@@ -175,3 +175,15 @@ void PlaceListModel::addItem(QVariantMap itemMap)
         emit dataChanged(index(itemIndexList.indexOf(id)), index(itemIndexList.indexOf(id)));
     }
 }
+QStringList PlaceListModel::getItemList() const
+{
+    return itemList;
+}
+
+void PlaceListModel::setItemList(const QStringList &value)
+{
+    emit beginResetModel();
+    itemList = value;
+    emit endResetModel();
+}
+

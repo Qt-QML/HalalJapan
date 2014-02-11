@@ -4,7 +4,7 @@
 Settings* settingsInstance = 0;
 
 Settings::Settings(QObject *parent) :
-    QSettings(QString("fpermana"), QString("HalalFood"), parent)
+    QSettings(QString("fpermana"), QString("HalalJapan"), parent)
 {
     if (!settingsInstance) {
         settingsInstance = this;
@@ -55,7 +55,7 @@ void Settings::restoreSettings()
 #else
         imagesPath = QDesktopServices::storageLocation(QDesktopServices::HomeLocation);
 #endif
-        imagesPath.append(QDir::separator()).append(".HalalFood").append(QDir::separator()).append("images");
+        imagesPath.append(QDir::separator()).append(".HalalJapan").append(QDir::separator()).append("images");
     }
 
     if(!QDir(imagesPath).exists())
